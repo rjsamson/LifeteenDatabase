@@ -8,7 +8,47 @@
 </head>
 <body>
 <div class="container">
+<div class="navbar">
+<form action="/contacts" class="navbar-search pull-left">
+  <input id="contact-search" name="s" type="text" class="search-query" autocomplete="off" placeholder="Search Contacts">
+  <input type="submit" value="Search Contacts" class="btn btn-small"/>
+</form>
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+  </ul>
+</div>
+</div>
+
 <%= yield %>
 </div>
+
+<script type="text/javascript">
+
+$.getJSON('/contacts.json', function(data) {
+  var contacts = [];
+ 
+  $.each(data, function(key, val) {
+    contacts.push(val.first_name + " " + val.last_name);
+  });
+$("#contact-search").typeahead({
+    source : contacts
+});
+});
+
+var colors = ["red", "blue", "green", "yellow", "brown", "black"];
+ 
+$('#search').typeahead({source: colors});
+</script>
+
+
+
+
 </body>
+
 </html>

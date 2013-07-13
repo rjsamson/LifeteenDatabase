@@ -33180,3 +33180,1996 @@ Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:14:39 -0400
 Processing by ContactsController#index as JSON
   [1m[35mContact Load (7.5ms)[0m  SELECT "contacts".* FROM "contacts"
 Completed 200 OK in 1123ms (Views: 1115.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/contacts?s=ea" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"ea"}
+  [1m[36mContact Load (1.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%ea%' OR first_name like '%ea%' OR last_name like '%ea%')[0m
+  Rendered contacts/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:16:38 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (11.2ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1112ms (Views: 1099.9ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/contacts?s=ea" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"ea"}
+  [1m[36mContact Load (1.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%ea%' OR first_name like '%ea%' OR last_name like '%ea%')[0m
+  Rendered contacts/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:16:49 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (7.6ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1112ms (Views: 1103.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/contacts?s=" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>""}
+  [1m[36mContact Load (8.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%%' OR first_name like '%%' OR last_name like '%%')[0m
+  Rendered contacts/index.html.erb within layouts/application (483.0ms)
+Completed 200 OK in 495ms (Views: 486.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:16:54 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:16:55 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (7.9ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1065ms (Views: 1056.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/contacts?s=" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>""}
+  [1m[36mContact Load (8.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%%' OR first_name like '%%' OR last_name like '%%')[0m
+  Rendered contacts/index.html.erb within layouts/application (474.9ms)
+Completed 200 OK in 527ms (Views: 518.8ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:06 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:07 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (7.5ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1111ms (Views: 1102.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/contacts?s=" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>""}
+  [1m[36mContact Load (30.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%%' OR first_name like '%%' OR last_name like '%%')[0m
+  Rendered contacts/index.html.erb within layouts/application (479.1ms)
+Completed 200 OK in 527ms (Views: 496.1ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:16 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:17 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:17 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (7.5ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1099ms (Views: 1090.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/contacts?s=" for 127.0.0.1 at 2013-07-13 02:17:18 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>""}
+  [1m[36mContact Load (8.0ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%%' OR first_name like '%%' OR last_name like '%%')[0m
+  Rendered contacts/index.html.erb within layouts/application (484.6ms)
+Completed 200 OK in 497ms (Views: 488.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:19 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (7.5ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1108ms (Views: 1099.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/contacts?s=Aaron" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Aaron"}
+  [1m[36mContact Load (1.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Aaron%' OR first_name like '%Aaron%' OR last_name like '%Aaron%')[0m
+  Rendered contacts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:35 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:36 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (88.2ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1129ms (Views: 1040.5ms | ActiveRecord: 88.2ms)
+
+
+Started GET "/contacts?s=Aaron+Pfoltzer" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Aaron Pfoltzer"}
+  [1m[36mContact Load (1.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Aaron Pfoltzer%' OR first_name like '%Aaron Pfoltzer%' OR last_name like '%Aaron Pfoltzer%')[0m
+  Rendered contacts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:41 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (28.1ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1116ms (Views: 1087.6ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/contacts?s=Thomas+Carrigan" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Thomas Carrigan"}
+  [1m[36mContact Load (1.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Thomas Carrigan%' OR first_name like '%Thomas Carrigan%' OR last_name like '%Thomas Carrigan%')[0m
+  Rendered contacts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:17:47 -0400
+Processing by ContactsController#index as JSON
+  [1m[35mContact Load (8.5ms)[0m  SELECT "contacts".* FROM "contacts"
+Completed 200 OK in 1083ms (Views: 1073.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/contacts/2310/edit" for 127.0.0.1 at 2013-07-13 02:17:50 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"2310"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1[0m  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (7.5ms)
+  Rendered contacts/edit.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:17:50 -0400
+
+
+Started GET "/contacts?s=Thomas+Carrigan" for 127.0.0.1 at 2013-07-13 02:18:20 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Thomas Carrigan"}
+  [1m[35mContact Load (1.1ms)[0m  SELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Thomas Carrigan%' OR first_name like '%Thomas Carrigan%' OR last_name like '%Thomas Carrigan%')
+  Rendered contacts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:20 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:20 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:20 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:18:21 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (10.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1065ms (Views: 1054.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/contacts/2310/edit" for 127.0.0.1 at 2013-07-13 02:18:22 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"2310"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (7.4ms)
+  Rendered contacts/edit.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:18:22 -0400
+
+
+Started GET "/contacts/2310/edit?s=aaron" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"s"=>"aaron", "id"=>"2310"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1[0m  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (7.1ms)
+  Rendered contacts/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:18:26 -0400
+
+
+Started GET "/contacts/2310/edit?s=aaron" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"s"=>"aaron", "id"=>"2310"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (79.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 94ms (Views: 92.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:18:52 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1062ms (Views: 1053.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/contacts/2310/edit?s=Aaron1+Pfoltzer1" for 127.0.0.1 at 2013-07-13 02:18:55 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"s"=>"Aaron1 Pfoltzer1", "id"=>"2310"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (7.4ms)
+  Rendered contacts/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:18:56 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1087ms (Views: 1078.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/contacts/2310/edit?s=rr" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"s"=>"rr", "id"=>"2310"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (6.9ms)
+  Rendered contacts/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:01 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1112ms (Views: 1103.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/contacts/2310/edit?s=rr" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"s"=>"rr", "id"=>"2310"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2310"]]
+  Rendered contacts/_form.html.erb (7.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:20 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1109ms (Views: 1100.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/contacts?s=test" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"test"}
+  [1m[35mContact Load (1.2ms)[0m  SELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%test%' OR first_name like '%test%' OR last_name like '%test%')
+  Rendered contacts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:24 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (33.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1144ms (Views: 1109.7ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/contacts?s=Tessa+Wall" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Tessa Wall"}
+  [1m[35mContact Load (1.1ms)[0m  SELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Tessa Wall%' OR first_name like '%Tessa Wall%' OR last_name like '%Tessa Wall%')
+  Rendered contacts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:28 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (28.6ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1119ms (Views: 1089.7ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/contacts/2512/edit" for 127.0.0.1 at 2013-07-13 02:19:29 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"2512"}
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "2512"]]
+  Rendered contacts/_form.html.erb (35.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:29 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:29 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (8.2ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1142ms (Views: 1133.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/contacts?s=Aaron+Pfoltzer" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Aaron Pfoltzer"}
+  [1m[35mContact Load (1.2ms)[0m  SELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Aaron Pfoltzer%' OR first_name like '%Aaron Pfoltzer%' OR last_name like '%Aaron Pfoltzer%')
+  Rendered contacts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:36 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (8.1ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1098ms (Views: 1089.8ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/contacts/3029/edit" for 127.0.0.1 at 2013-07-13 02:19:37 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"3029"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "3029"]]
+  Rendered contacts/_form.html.erb (6.8ms)
+  Rendered contacts/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/Contact.png" for 127.0.0.1 at 2013-07-13 02:19:37 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:37 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1125ms (Views: 1115.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/contacts?s=Mark+Trudeau" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+Processing by ContactsController#index as HTML
+  Parameters: {"s"=>"Mark Trudeau"}
+  [1m[35mContact Load (1.2ms)[0m  SELECT "contacts".* FROM "contacts" WHERE ((first_name || ' ' || last_name) LIKE '%Mark Trudeau%' OR first_name like '%Mark Trudeau%' OR last_name like '%Mark Trudeau%')
+  Rendered contacts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:45 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (8.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1107ms (Views: 1097.3ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/contacts/3045/edit" for 127.0.0.1 at 2013-07-13 02:19:47 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"3045"}
+  [1m[35mContact Load (0.3ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", "3045"]]
+  Rendered contacts/_form.html.erb (7.3ms)
+  Rendered contacts/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/Facebook.png" for 127.0.0.1 at 2013-07-13 02:19:47 -0400
+
+
+Started GET "/assets/Twitter.png" for 127.0.0.1 at 2013-07-13 02:19:47 -0400
+
+
+Started GET "/contacts.json" for 127.0.0.1 at 2013-07-13 02:19:47 -0400
+Processing by ContactsController#index as JSON
+  [1m[36mContact Load (7.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+Completed 200 OK in 1085ms (Views: 1076.4ms | ActiveRecord: 7.8ms)
