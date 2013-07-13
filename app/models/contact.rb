@@ -6,7 +6,7 @@ class Contact < ActiveRecord::Base
 
 	def self.search(search)
 		search_string = '%'+ search.to_s + '%'
-  		where("(first_name  || ' ' || last_name) LIKE ? OR first_name like ? OR last_name like ?", search_string, search_string, search_string)
+  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string)
 	end
 	def pic_url
 		if self.facebook_id and self.facebook_id.length > 0 then

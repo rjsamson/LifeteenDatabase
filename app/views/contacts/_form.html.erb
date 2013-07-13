@@ -1,4 +1,4 @@
-<div class="container">
+
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div class="row">
@@ -16,19 +16,9 @@
   <div class="row">
     <div class="span5">
         <div class="thumbnail">
-          <img data-src="holder.js/260x180" src="<%=@contact.pic_url%>" width="260"/>
+          <img data-src="holder.js/160x120" src="<%=@contact.pic_url%>" width="160"/>
         </div>
-    </div>
-    <div class="span5 well">
-      <h4>General Details</h4>
-      <p><%=f.label :first_name%> <%=f.text_field :first_name%>
-      <%=f.label :last_name%> <%=f.text_field :last_name%>
-      <%=f.label :gender%> <%=f.select :gender, [["Male", "m"],["Female","f"]]%>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span5">
-      <h4>Social Media</h4>
+     <h4>Social Media</h4>
       <p>
         <%=f.label :facebook_id%> 
         <%=f.text_field :facebook_id%>
@@ -49,6 +39,13 @@
             <%=image_tag "Myspace.png", width: 16%>
           </a>
         <%end%>
+
+    </div>
+    <div class="span5 well">
+      <h4>General Details</h4>
+      <p><%=f.label :first_name%> <%=f.text_field :first_name%>
+      <%=f.label :last_name%> <%=f.text_field :last_name%>
+      <%=f.label :gender%> <%=f.select :gender, [["Male", "m"],["Female","f"]]%>
     </div>
     <div class="span5">
       <h4>Other Important Details</h4>
@@ -67,7 +64,6 @@
       </div>
   </div>
   <div class="row actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Contact', class: "btn" %>
   </div>
 <% end %>
-</div>
