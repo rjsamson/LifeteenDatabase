@@ -1,10 +1,11 @@
+
 <h2>Contacts</h2>
 <div class="btn-group">
   <button class="btn" onclick="window.location.href='<%=new_contact_path%>'">
     <%= link_to 'New Contact', new_contact_path %>
   </button>
-
-  <input type="text" data-provide="typeahead" class="span3" style="margin: 0 auto;" data-items="4" data-source="[<% @contacts.each do |contact| %>,&quot;<%=contact.first_name + " " + contact.last_name%>&quot;<%end%>]"/>
+<input id="search"/>
+  <input id="contact-search" type="text" data-provide="typeahead" class="span3" style="margin: 0 auto;" data-items="4" autocomplete="off"/>
   <ul class="thumbnails">
   <% @contacts.each do |contact| %>
     <li class="span4">
@@ -16,7 +17,23 @@
   <% end %>
   </ul>
 </div>
+<script type="text/javascript">
 
+$.getJSON('/contacts.json', function(data) {
+  var contacts = [];
+ 
+  $.each(data, function(key, val) {
+    contacts.push(val.first_name + " " + val.last_name);
+  });
+$("#contact-search").typeahead({
+    source : contacts
+});
+});
+
+var colors = ["red", "blue", "green", "yellow", "brown", "black"];
+ 
+$('#search').typeahead({source: colors});
+</script>
 
 
 
