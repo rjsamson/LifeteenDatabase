@@ -3,13 +3,15 @@
   <button class="btn" onclick="window.location.href='<%=new_contact_path%>'">
     <%= link_to 'New Contact', new_contact_path %>
   </button>
+
+  <input type="text" data-provide="typeahead" class="span3" style="margin: 0 auto;" data-items="4" data-source="[<% @contacts.each do |contact| %>,&quot;<%=contact.first_name + " " + contact.last_name%>&quot;<%end%>]"/>
   <ul class="thumbnails">
   <% @contacts.each do |contact| %>
     <li class="span4">
       <div class="thumbnail">
-        <%=link_to raw("<img data-src='holder.js/260x180' alt='"+contact.first_name + " " + contact.last_name + "' src='/assets/Contact.png'>"), edit_contact_path(contact)%>
-        <h4><%=link_to contact.first_name + " " + contact.last_name, edit_contact_path(contact)%></h4>
+        <%=link_to raw("<img data-src='holder.js/160x120' alt='"+contact.first_name + " " + contact.last_name + "' src='"+contact.pic_url+"' width='120'>"), edit_contact_path(contact)%>
       </div>
+        <h4><%=link_to contact.first_name + " " + contact.last_name, edit_contact_path(contact)%></h4>
     </li>
   <% end %>
   </ul>

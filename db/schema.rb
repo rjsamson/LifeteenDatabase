@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130713002827) do
+ActiveRecord::Schema.define(version: 20130713033949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20130713002827) do
     t.boolean  "is_active"
     t.boolean  "is_group_or_parish"
     t.text     "life_experience"
-    t.integer  "address_id"
     t.integer  "address2_id"
     t.integer  "college_address_id"
     t.string   "phone"
@@ -57,6 +56,12 @@ ActiveRecord::Schema.define(version: 20130713002827) do
     t.string   "fax"
     t.string   "work_phone"
     t.integer  "address1_id"
+    t.string   "myspace_id"
+    t.string   "twitter_id"
+    t.string   "youth_group_leader"
+    t.string   "school"
+    t.boolean  "safe_child_video_letter_sent"
+    t.integer  "watched_safe_child_video"
   end
 
 end
