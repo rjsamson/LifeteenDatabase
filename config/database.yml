@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: lifeteen_dev
+  pool: 5
+  username: lifeteen
+  password: core
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: lifeteen_test
+  pool: 5
+  username: lifeteen
+  password: core
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: lifeteen_prod
+  pool: 5
+  username: lifeteen
+  password: core
