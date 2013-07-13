@@ -1,22 +1,35 @@
-
+<div class="navbar">
+<form class="navbar-search pull-left">
+  <input id="contact-search" name="s" type="text" class="search-query" autocomplete="off" placeholder="Search Contacts">
+</form>
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+  </ul>
+</div>
+</div>
 <h2>Contacts</h2>
 <div class="btn-group">
   <button class="btn" onclick="window.location.href='<%=new_contact_path%>'">
     <%= link_to 'New Contact', new_contact_path %>
   </button>
-<input id="search"/>
-  <input id="contact-search" type="text" data-provide="typeahead" class="span3" style="margin: 0 auto;" data-items="4" autocomplete="off"/>
   <ul class="thumbnails">
-  <% @contacts.each do |contact| %>
+  <% if @contacts then @contacts.each do |contact| %>
     <li class="span4">
       <div class="thumbnail">
         <%=link_to raw("<img data-src='holder.js/160x120' alt='"+contact.first_name + " " + contact.last_name + "' src='"+contact.pic_url+"' width='120'>"), edit_contact_path(contact)%>
       </div>
         <h4><%=link_to contact.first_name + " " + contact.last_name, edit_contact_path(contact)%></h4>
     </li>
-  <% end %>
+  <% end end %>
   </ul>
 </div>
+
+
 <script type="text/javascript">
 
 $.getJSON('/contacts.json', function(data) {

@@ -4,7 +4,11 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    if(params[:s]) then
+      @contacts=Contact.search(params[:s])
+    else
+      @contacts = Contact.all
+    end
     respond_to do |format|
       format.html
       format.json { render json:  @contacts }
