@@ -1,9 +1,5 @@
 
 <h2>Contacts</h2>
-<div class="btn-group">
-  <button class="btn" onclick="window.location.href='<%=new_contact_path%>'">
-    <%= link_to 'New Contact', new_contact_path %>
-  </button>
   <ul class="thumbnails">
   <% if @contacts then @contacts.each do |contact| %>
     <li class="span4">
@@ -14,6 +10,5 @@
     </li>
   <% end end %>
   </ul>
-</div>
 
 

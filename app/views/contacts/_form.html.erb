@@ -13,6 +13,14 @@
     </div>
   </div>
   <% end %>
+  <div class="btn-group">
+
+    <%= f.submit 'Save Contact', class: "btn btn-primary", name:"save" %>
+    <% if @contact.id then %>
+    <%= button_to "Delete Contact", {:controller => :contacts,
+      :action => 'destroy', :id => @contact.id }, :method => :delete, :confirm => "'Delete Contact '"+@contact.first_name+" "+@contact.last_name+"?", :title => 'Delete Contact?', class: "btn btn-danger"%>
+    <% end %>
+   </div>
   <div class="row">
     <div class="span5">
         <div class="thumbnail">
@@ -63,7 +71,10 @@
       <%=f.label :safe_child_video_letter_sent%> <%=f.check_box :safe_child_video_letter_sent%>
       </div>
   </div>
-  <div class="row actions">
-    <%= f.submit 'Save Contact', class: "btn" %>
+  <div class="btn-toolbar">
+    <div class="btn-group">
+
+    <%= f.submit 'Save Contact', class: "btn btn-primary" %>
+    </div>  
   </div>
 <% end %>
