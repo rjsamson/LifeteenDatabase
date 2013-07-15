@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  end_date: 2013-07-14
+  grades: MyString
+  start_date: 2013-07-14
+  contact_id: 1
+
+two:
+  end_date: 2013-07-14
+  grades: MyString
+  start_date: 2013-07-14
+  contact_id: 1

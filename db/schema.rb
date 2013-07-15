@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130713033949) do
+ActiveRecord::Schema.define(version: 20130715003501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,36 @@ ActiveRecord::Schema.define(version: 20130713033949) do
     t.string   "state"
     t.string   "street"
     t.string   "zipcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "catechetical_experiences", force: true do |t|
+    t.date     "end_date"
+    t.string   "grades"
+    t.date     "start_date"
+    t.integer  "contact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contact_date_events", force: true do |t|
+    t.integer  "date_event_id"
+    t.integer  "contact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contact_events", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "contact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contact_ministries", force: true do |t|
+    t.integer  "ministry_id"
+    t.integer  "contact_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +92,39 @@ ActiveRecord::Schema.define(version: 20130713033949) do
     t.string   "school"
     t.boolean  "safe_child_video_letter_sent"
     t.integer  "watched_safe_child_video"
+  end
+
+  create_table "date_event_types", force: true do |t|
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "date_events", force: true do |t|
+    t.date     "event_date"
+    t.integer  "date_event_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.binary   "bytes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "filename"
+    t.string   "filetype"
+  end
+
+  create_table "ministries", force: true do |t|
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

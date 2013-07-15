@@ -3,7 +3,8 @@ class Contact < ActiveRecord::Base
 	belongs_to :address1, foreign_key: "address1_id", class_name: "Address"
 	belongs_to :address2, foreign_key: "address2_id", class_name: "Address"
 	belongs_to :college_address, foreign_key: "college_address_id", class_name: "Address"
-
+	has_many :catechetical_experience
+	
 	def self.search(search)
 		search_string = '%'+ search.to_s + '%'
   		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string)

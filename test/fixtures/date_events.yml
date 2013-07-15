@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_date: 2013-07-14
+  date_event_type: 1
+
+two:
+  event_date: 2013-07-14
+  date_event_type: 1

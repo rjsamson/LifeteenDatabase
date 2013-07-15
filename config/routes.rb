@@ -55,5 +55,6 @@ LifeteenDatabase::Application.routes.draw do
   #   end
 
   resources :contacts
+  resources :images
   root to: "contacts#index"
 end
