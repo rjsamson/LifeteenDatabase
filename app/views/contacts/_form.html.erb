@@ -83,7 +83,20 @@
       <h4>Safe Child Video</h4>
       <p><%=f.label :watched_safe_child_video, "Watched?"%> <%=f.select :watched_safe_child_video, [['No', 0],["Yes", 1],["Opt-out", 3]]%>
       <%=f.label :safe_child_video_letter_sent%> <%=f.check_box :safe_child_video_letter_sent%>
+      <h4>Health</h4>
+      <%=f.label :allergies%> <%=f.text_field :allergies%>
+      <%=f.label :diet_restrictions%> <%=f.text_field :diet_restrictions%>
+      <%=f.label :medical%> <%=f.text_field :medical%>
       </div>
+  </div>
+  <div class="row">
+    <h4>Phone Numbers</h4>
+    <div class="span5">
+      <%=f.label :phone %> <%=f.telephone_field :phone%>
+      <%=f.label :fax %> <%=f.telephone_field :fax%>
+      <%=f.label :work_phone %> <%=f.telephone_field :work_phone%>
+      <%=f.label :cell %> <%=f.telephone_field :cell%>
+    </div>
   </div>
   <div class="btn-group">
    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>

@@ -81,6 +81,7 @@ class ContactsController < ApplicationController
           :first_name, :last_name, :gender, :is_group_or_parish, 
           :facebook_id, :myspace_id, :twitter_id, :graduating_class, :school,
           :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent,
+          :allergies, :diet_restrictions, :medical, :phone, :fax, :cell, :work_phone,
           address1_attributes: [:street, :city, :state, :zipcode])
     end
 end

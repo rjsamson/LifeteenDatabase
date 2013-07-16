@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716013405) do
+ActiveRecord::Schema.define(version: 20130716020227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20130716013405) do
     t.string   "school"
     t.boolean  "safe_child_video_letter_sent"
     t.integer  "watched_safe_child_video"
+    t.string   "medical"
   end
 
   create_table "date_event_types", force: true do |t|
