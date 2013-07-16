@@ -1,5 +1,5 @@
 class Address < ActiveRecord::Base
-	has_one :contact
+	belongs_to :contact
 
 	def complete
 		self.street + " " + self.city + ", " + self.state + " " + self.zipcode

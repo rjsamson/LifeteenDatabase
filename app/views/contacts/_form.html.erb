@@ -14,10 +14,17 @@
   </div>
   <% end %>
   <div class="btn-group">
+   <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+    <% end %>
+   <% if @contact.id then %>
+   <%= link_to @contact, confirm: 'Are you sure you want to delete contact '+@contact.first_name + ' ' + @contact.last_name+'?', disable_with: 'deleting...', method: :delete, class: 'btn-danger btn' do %>
+  <i class="icon-trash icon-white"></i> Delete
+<% end %>
 
-    <%= f.submit 'Save Contact', class: "btn btn-primary", name:"save" %>
-    <% if @contact.id then %>
-    <%= button_to "Delete Contact", {:controller => :contacts,
+
+    <%#= f.submit 'Save Contact', class: "btn btn-primary", name:"save" %>
+      <%#= button_to raw('<i class="icon-trash"/> Delete Contact'),{:controller => :contacts, 
       :action => 'destroy', :id => @contact.id }, :method => :delete, :confirm => "'Delete Contact '"+@contact.first_name+" "+@contact.last_name+"?", :title => 'Delete Contact?', class: "btn btn-danger"%>
     <% end %>
    </div>
@@ -31,23 +38,30 @@
         <%=f.label :facebook_id%> 
         <%=f.text_field :facebook_id%>
         <% if @contact.facebook_url %>
-          <a href="<%=@contact.facebook_url%>">
+          <a href="<%=@contact.facebook_url%>" target="_blank">
             <%=image_tag "Facebook.png", width: 16%>
           </a>
         <%end%>
       <%=f.label :twitter_id%> <%=f.text_field :twitter_id%>
         <% if @contact.facebook_url %>
-          <a href="<%=@contact.twitter_url%>">
+          <a href="<%=@contact.twitter_url%>" target="_blank">
             <%=image_tag "Twitter.png", width: 16%>
           </a>
         <%end%>
       <%=f.label :myspace_id%> <%=f.text_field :myspace_id%>
         <% if @contact.myspace_url %>
-          <a href="<%=@contact.facebook_url%>">
+          <a href="<%=@contact.myspace_url%>" target="_blank">
             <%=image_tag "Myspace.png", width: 16%>
           </a>
         <%end%>
-
+        <h4>Address</h4>
+        <%= f.fields_for :address1, @contact.address1 do |address1_fields| %>
+          <%=address1_fields.label :street%> <%=address1_fields.text_field :street%>
+          <%=address1_fields.label :city%> <%=address1_fields.text_field :city%>
+          <%=address1_fields.label :state%> <%=address1_fields.text_field :state, maxlength: 2%>
+          <%=address1_fields.label :zipcode%> <%=address1_fields.text_field :zipcode%>
+        <% end %>
+      
     </div>
     <div class="span5 well">
       <h4>General Details</h4>
@@ -71,10 +85,19 @@
       <%=f.label :safe_child_video_letter_sent%> <%=f.check_box :safe_child_video_letter_sent%>
       </div>
   </div>
-  <div class="btn-toolbar">
-    <div class="btn-group">
+  <div class="btn-group">
+   <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+    <% end %>
+   <% if @contact.id then %>
+   <%= link_to @contact, confirm: 'Are you sure you want to delete contact '+@contact.first_name + ' ' + @contact.last_name+'?', disable_with: 'deleting...', method: :delete, class: 'btn-danger btn' do %>
+  <i class="icon-trash icon-white"></i> Delete
+<% end %>
 
-    <%= f.submit 'Save Contact', class: "btn btn-primary" %>
-    </div>  
-  </div>
+
+    <%#= f.submit 'Save Contact', class: "btn btn-primary", name:"save" %>
+      <%#= button_to raw('<i class="icon-trash"/> Delete Contact'),{:controller => :contacts, 
+      :action => 'destroy', :id => @contact.id }, :method => :delete, :confirm => "'Delete Contact '"+@contact.first_name+" "+@contact.last_name+"?", :title => 'Delete Contact?', class: "btn btn-danger"%>
+    <% end %>
+   </div>
 <% end %>

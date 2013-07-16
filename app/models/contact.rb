@@ -1,9 +1,14 @@
 class Contact < ActiveRecord::Base
 	validates :first_name, :last_name, presence: true
-	belongs_to :address1, foreign_key: "address1_id", class_name: "Address"
-	belongs_to :address2, foreign_key: "address2_id", class_name: "Address"
-	belongs_to :college_address, foreign_key: "college_address_id", class_name: "Address"
+#	belongs_to :address1, foreign_key: "address1_id", class_name: "Address"
+#	belongs_to :address2, foreign_key: "address2_id", class_name: "Address"
+#	belongs_to :college_address, foreign_key: "college_address_id", class_name: "Address"
+	has_one :address1
 	has_many :catechetical_experience
+  	accepts_nested_attributes_for :address1, :allow_destroy => true
+ #	after_initialize do
+ #   	self.address1 ||= self.build_address1()
+ # 	end
 	
 	def self.search(search)
 		search_string = '%'+ search.to_s + '%'

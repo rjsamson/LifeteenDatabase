@@ -80,7 +80,7 @@ class ContactsController < ApplicationController
       params.require(:contact).permit(
           :first_name, :last_name, :gender, :is_group_or_parish, 
           :facebook_id, :myspace_id, :twitter_id, :graduating_class, :school,
-          :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent
-          )
+          :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent,
+          address1_attributes: [:street, :city, :state, :zipcode])
     end
 end
