@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-
+gem "seed_dump", "~> 0.5.3"
+gem 'protected_attributes'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

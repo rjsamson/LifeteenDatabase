@@ -1,0 +1,3 @@
+class CollegeAddress < Address
+	
+end
