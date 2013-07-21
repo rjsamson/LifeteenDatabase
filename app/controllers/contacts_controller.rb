@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     if(params[:s]) then
       @contacts=Contact.search(params[:s])
     else
-      @contacts = Contact.find(:all, :order => "last_name asc, first_name asc")
+      @contacts = Contact.all(order: "last_name asc, first_name asc")
     end
     respond_to do |format|
       format.html
