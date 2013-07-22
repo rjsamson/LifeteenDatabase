@@ -1,5 +1,12 @@
 class Contact < ActiveRecord::Base
-	validates :first_name, :last_name, presence: true
+	validates :first_name, :last_name, :address1, presence: true
+	validates_format_of :phone, :cell, :fax, :work_phone, 
+    	message: "must be a valid telephone number.",
+    	with: /^[\(\)0-9\- \+\.]{10,20} *[extension\.]{0,9} *[0-9]{0,5}$/i,
+    	multiline: true,
+    	allow_blank: true
+	validates :graduating_class, allow_blank: true, format: {with: /(19|20)\d{2}/i }
+	 
 #	belongs_to :address1, foreign_key: "address1_id", class_name: "Address"
 #	belongs_to :address2, foreign_key: "address2_id", class_name: "Address"
 #	belongs_to :college_address, foreign_key: "college_address_id", class_name: "Address"
@@ -16,6 +23,7 @@ class Contact < ActiveRecord::Base
   	accepts_nested_attributes_for :address1, :allow_destroy => true
   	accepts_nested_attributes_for :address2, :allow_destroy => true
   	accepts_nested_attributes_for :college_address, :allow_destroy => true
+
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end

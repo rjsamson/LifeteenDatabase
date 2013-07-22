@@ -1,10 +1,17 @@
-class ImagesController < ApplicationController
+class ImageController < ApplicationController
 	def show
-	    @img = Image.find(params[:id])
-	    send_data(@img.bytes, :type => @img.filetype, :filename => @img.filename,
-              :disposition => 'inline')
+		@img = Image.find(params[:id])
+		send_data(@img.bytes, :type => @img.filetype, :filename => @img.filename,
+	      	:disposition => 'inline')
 	end
-
+	def index
+		if(params[:contact_id])
+			@contact = Contact.find(params[:contact_id])
+			redirect_to @contact.pic_url
+		else
+	    	@img = nil
+	    end
+	end
 	def create
 		@img = Image.new
 		@img.set_bytes params[:bytes]
