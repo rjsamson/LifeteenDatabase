@@ -24,6 +24,7 @@ class Contact < ActiveRecord::Base
   	accepts_nested_attributes_for :address2, :allow_destroy => true
   	accepts_nested_attributes_for :college_address, :allow_destroy => true
 
+  	belongs_to :image
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end
