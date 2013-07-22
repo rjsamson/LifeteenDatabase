@@ -53,7 +53,7 @@ $.getJSON('/contacts.json', function(data) {
 $("#contact-search").typeahead({
     source : contacts,
     highlighter: function(item){
-        return "<div><img src='/contacts/"+contact_ids[item]+"/image' width='22'/> "+item+"</div>";
+        return "<div><img src='/contacts/"+contact_ids[item]+"/image?time=<%=Time.now%>' width='22'/> "+item+"</div>";
     },
 
 });

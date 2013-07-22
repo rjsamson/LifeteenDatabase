@@ -46,10 +46,10 @@
    <h4>Social Media</h4>
       <p>
         <%=f.label :facebook_id%> 
-        <%=f.text_field :facebook_id%>
+        <%=f.text_field :facebook_id, placeholder: "Facebook"%>
         <% if @contact.facebook_url %>
           <a href="<%=@contact.facebook_url%>" target="_blank">
-            <%=image_tag "Facebook.png", width: 16, placeholder: "Facebook"%>
+            <%=image_tag "Facebook.png", width: 16%>
           </a>
         <%end%>
       <%=f.label :twitter_id%> <%=f.text_field :twitter_id, placeholder: "Twitter"%>
