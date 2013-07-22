@@ -93,8 +93,8 @@
       </div>
       <div class="span5">
      <h4>Address</h4>
-        <% @contact.build_address1 if @contact.address1.nil? %>
-        <% f.fields_for :address1 do |address1_fields| %>
+        <%# @contact.build_address1 if @contact.address1.nil? %>
+        <%= fields_for :address1, @contact.address1 do |address1_fields| %>
           <%=address1_fields.label :street%> <%=address1_fields.text_field :street%>
           <%=address1_fields.label :city%> <%=address1_fields.text_field :city%>
           <%=address1_fields.label :state%> <%=address1_fields.text_field :state, maxlength: 2%>

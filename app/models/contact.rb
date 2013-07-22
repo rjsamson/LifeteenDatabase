@@ -10,16 +10,19 @@ class Contact < ActiveRecord::Base
     attr_accessible :first_name, :last_name, :gender, :is_group_or_parish, 
           :facebook_id, :myspace_id, :twitter_id, :graduating_class, :school,
           :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent,
-          :allergies, :diet_restrictions, :medical, :phone, :fax, :cell, :work_phone
-    attr_accessor :address1
+          :allergies, :diet_restrictions, :medical, :phone, :fax, :cell, :work_phone, 
+          :address1, :address2, :college_address
+
   	accepts_nested_attributes_for :address1, :allow_destroy => true
+  	accepts_nested_attributes_for :address2, :allow_destroy => true
+  	accepts_nested_attributes_for :college_address, :allow_destroy => true
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end
 	
 	def self.search(search)
 		search_string = '%'+ search.to_s + '%'
-  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string, order: "last_name asc, first_name asc")
+  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc")
 	end
 	def pic_url
 		if self.facebook_id and self.facebook_id.length > 0 then
