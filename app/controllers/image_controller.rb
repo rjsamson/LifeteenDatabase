@@ -1,15 +1,13 @@
 class ImageController < ApplicationController
 	def show
 		@img = Image.find(params[:id])
-		send_data(@img.bytes, :type => @img.filetype, :filename => @img.filename,
-	      	:disposition => 'inline')
+		send_image(@img)
 	end
 	def index
 		if(params[:contact_id])
 			@contact = Contact.find(params[:contact_id])
 			if(@contact.image)
-				send_data(@contact.image.bytes, :type => @contact.image.filetype, :filename => @contact.image.filename,
-	      		:disposition => 'inline')
+				send_image(@contact.image)
 	      	else
 				redirect_to @contact.pic_url
 			end
@@ -21,6 +19,9 @@ class ImageController < ApplicationController
 	def create
 		if(params[:contact_id])
 			@contact = Contact.find(params[:contact_id])
+			if(@contact.image)
+				@contact.image.delete
+			end
 			@contact.image = Image.new
 			@contact.image.set_bytes params[:bytes]
 		   respond_to do |format|
@@ -50,4 +51,9 @@ class ImageController < ApplicationController
 		@img.save
 	end
 
+	private
+		def send_image(img)
+			send_data(img.bytes, :type => img.filetype, :filename => img.filename,
+	      		:disposition => 'inline')
+		end
 end
