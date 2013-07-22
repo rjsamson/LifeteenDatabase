@@ -42,19 +42,24 @@
 <script type="text/javascript">
 
 $.getJSON('/contacts.json', function(data) {
+  var contact_ids = [];
   var contacts = [];
- 
+
   $.each(data, function(key, val) {
-    contacts.push(val.first_name + " " + val.last_name);
-  });
+    var name = val.first_name + " " + val.last_name;
+    contact_ids[name] = val.id
+    contacts.push(name);
+ });
 $("#contact-search").typeahead({
-    source : contacts
+    source : contacts,
+    highlighter: function(item){
+        return "<div><img src='/contacts/"+contact_ids[item]+"/image' width='22'/> "+item+"</div>";
+    },
+
 });
 });
 
-var colors = ["red", "blue", "green", "yellow", "brown", "black"];
- 
-$('#search').typeahead({source: colors});
+
 </script>
 
 
