@@ -25,16 +25,29 @@ class Contact < ActiveRecord::Base
   	accepts_nested_attributes_for :college_address, :allow_destroy => true
 
   	belongs_to :image
+
+  	scope :basic, -> { select(@fields).order(@order) }
+  	
+    @fields = [:id, :first_name, :last_name]
+    @limit = 24
+    @order = "last_name asc, first_name asc"
+
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end
+
 	def as_json(options={})
     	super(options.merge(only: [:id, :first_name, :last_name]))
   	end
 
-	def self.search(search, offset, limit)
-		search_string = '%'+ search.to_s + '%'
-  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").offset(offset).limit(limit)
+  	def self.basic_page(page = 0)
+  		offset = page * @limit
+  		basic.offset(offset).limit(@limit)
+  	end
+	def self.search(search, page)
+	    offset = page
+		search_string = '%'+search+'%'
+  		result = basic.where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").offset(page * @limit).limit(@limit)
 	end
 	def pic_filename
 		if self.facebook_pic_url then
