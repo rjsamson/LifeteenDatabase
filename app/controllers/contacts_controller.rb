@@ -17,7 +17,11 @@ class ContactsController < ApplicationController
       index_impl
 
      respond_to do |format|
-      format.html
+      format.html {
+        if(@contacts.size == 1)
+          redirect_to contact_path(@contacts.first) 
+        end
+      }
       format.json { render json: @contacts }
     end
   end
