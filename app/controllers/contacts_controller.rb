@@ -10,7 +10,10 @@ class ContactsController < ApplicationController
 
   def index_impl
     p = 0
+<<<<<<< HEAD
     logger.debug "TEST p: #{params[:p]}"
+=======
+>>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
     p = params[:p].to_i if(params[:p])
 
     offset = p * @limit
@@ -18,9 +21,13 @@ class ContactsController < ApplicationController
     if(params[:s]) then
       @contacts=Contact.search(params[:s], @offset, @limit).select(@fields)
     else
+<<<<<<< HEAD
       @contacts = Contact.select(@fields).order(@order).limit(@limit).offset(offset)
       
       #@contacts = Contact.offset(offset).limit(@limit).order(@order).select(@fields)
+=======
+      @contacts = Contact.order(@order).limit(@limit).offset(offset).select(@fields)
+>>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
     end
 
   end
