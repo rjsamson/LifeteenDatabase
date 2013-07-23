@@ -34,11 +34,7 @@ class Contact < ActiveRecord::Base
 
 	def self.search(search, offset, limit)
 		search_string = '%'+ search.to_s + '%'
-<<<<<<< HEAD
   		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").offset(offset).limit(limit)
-=======
-  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").limit(limit).offset(offset)
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
 	end
 	def pic_filename
 		if self.facebook_pic_url then

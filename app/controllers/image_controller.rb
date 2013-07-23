@@ -1,6 +1,4 @@
 class ImageController < ApplicationController
-<<<<<<< HEAD
-	
 	def index
 		if(params[:contact_id])
 			@contact = Contact.select([:id, :image_id, :facebook_id, :is_group_or_parish, :gender]).find(params[:contact_id])
@@ -14,27 +12,12 @@ class ImageController < ApplicationController
 	      		mime_type = Mime::Type.lookup_by_extension(extname)
     			content_type = mime_type.to_s unless mime_type.nil?
 	      		send_image_file(open(filename), content_type, filename)
-=======
-	def index
-		if(params[:contact_id])
-			@contact = Contact.find(params[:contact_id])
-			if(@contact.image)
-				send_image(@contact.image)
-	      	else
-				redirect_to @contact.pic_url
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
 			end
 		else
 			@img = Image.find(params[:id])
 			send_image(@img)
 	    end
 	end
-<<<<<<< HEAD
-=======
-	def show contact
-		"hello"
-	end
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
 	def new
 
 	end
@@ -74,7 +57,6 @@ class ImageController < ApplicationController
 	end
 
 	private
-<<<<<<< HEAD
 		def send_image_bytes(img)
 			send_data(img.bytes, :type => img.filetype, :filename => img.filename,
 	      		:disposition => 'inline')
@@ -83,10 +65,4 @@ class ImageController < ApplicationController
 			send_data(img_file.read, :type => content_type, :filename => filename,
 	      		:disposition => 'inline')
 		end
-=======
-		def send_image(img)
-			send_data(img.bytes, :type => img.filetype, :filename => img.filename,
-	      		:disposition => 'inline')
-		end
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
 end

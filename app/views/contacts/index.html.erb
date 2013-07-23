@@ -7,10 +7,6 @@ div#wrap{margin:0px auto;}
   <div id="wrap">
   <%= render 'sub' %>
   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
 
 
 <script type="text/javascript">
@@ -29,26 +25,9 @@ function yHandler(){
     if(s.length > 0) {
       url += "&s="+s;
     }
-
-<<<<<<< HEAD
     //alert(url);
     // Ajax call to get more dynamic data goes here
     $.get(url, "", function(newhtml){
-=======
-<script type="text/javascript">
-var page = 0;
-function yHandler(){
-  // Watch video for line by line explanation of the code
-  // http://www.youtube.com/watch?v=eziREnZPml4
-  var wrap = document.getElementById("wrap");
-  var contentHeight = wrap.offsetHeight;
-  var yOffset = window.pageYOffset; 
-  var y = yOffset + window.innerHeight;
-  if(y >= contentHeight){
-    page = page + 1;
-    // Ajax call to get more dynamic data goes here
-    $.get("/sub_contacts?p="+page, "", function(newhtml){
->>>>>>> b6b5a867190d2f9758aa107900f9c4c9e3eb04aa
             document.getElementById("wrap").innerHTML += newhtml; 
             //alert($("#wrap").innerHTML);  
         });
