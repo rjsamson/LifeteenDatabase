@@ -33,14 +33,9 @@
           <input id="contact-search" name="s" type="text" class="input-medium search-query" autocomplete="off" placeholder="Search Contacts">
         <input type="submit" value="Search" class="btn"/>
         </form>
-      </div>
-      </div>
-    </div>
-
-    
 <script type="text/javascript">
 
-$.getJSON('/contacts.json', function(data) {
+$.getJSON('/all_contacts.json', function(data) {
   var contact_ids = [];
   var contacts = [];
 
@@ -60,8 +55,9 @@ $("#contact-search").typeahead({
 
 
 </script>
-
-
+      </div>
+      </div>
+    </div>
    <%= yield %>
  </div>
 

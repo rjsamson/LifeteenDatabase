@@ -59,4 +59,6 @@ LifeteenDatabase::Application.routes.draw do
   end
   resources :image
   root to: "contacts#index"
+  get 'all_contacts', to: 'contacts#all'
+  get 'sub_contacts', to: 'contacts#sub'
 end

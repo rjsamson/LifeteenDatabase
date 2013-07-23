@@ -28,10 +28,13 @@ class Contact < ActiveRecord::Base
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end
-	
-	def self.search(search)
+	def as_json(options={})
+    	super(options.merge(only: [:id, :first_name, :last_name]))
+  	end
+
+	def self.search(search, offset, limit)
 		search_string = '%'+ search.to_s + '%'
-  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc")
+  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").limit(limit).offset(offset)
 	end
 	def pic_url
 		if self.facebook_id and self.facebook_id.length > 0 then
