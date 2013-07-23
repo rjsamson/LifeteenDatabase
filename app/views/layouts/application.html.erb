@@ -36,9 +36,8 @@
       </div>
       </div>
     </div>
-   <%= yield %>
- </div>
 
+    
 <script type="text/javascript">
 
 $.getJSON('/contacts.json', function(data) {
@@ -63,7 +62,8 @@ $("#contact-search").typeahead({
 </script>
 
 
-
+   <%= yield %>
+ </div>
 
 </body>
 
