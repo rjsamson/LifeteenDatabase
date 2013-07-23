@@ -11,7 +11,8 @@ class ContactsController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.json { render json:  @contacts }
+      format.json { render partial: 'index.json' }
+      #format.json { render json: @contacts }
     end
   end
 

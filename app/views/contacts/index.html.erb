@@ -4,7 +4,7 @@
   <% if @contacts then @contacts.each do |contact| %>
     <li class="span2">
       <div id="contact_thumbnail_<%=contact.id%>" class="thumbnail" style="text-align:center;height:200px;width">
-        <%=link_to (image_tag contact.pic_url, width:"160", alt:'"+contact.first_name + " " + contact.last_name + "'), edit_contact_path(contact)%>
+        <%=link_to (image_tag "/contacts/#{contact.id}/image", width:"160", alt:'"+contact.first_name + " " + contact.last_name + "'), edit_contact_path(contact)%>
         <h4><%=link_to raw(contact.first_name + " " + contact.last_name), edit_contact_path(contact)%></h4>
        </div>
 

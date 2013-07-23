@@ -1,8 +1,4 @@
 class ImageController < ApplicationController
-	def show
-		@img = Image.find(params[:id])
-		send_image(@img)
-	end
 	def index
 		if(params[:contact_id])
 			@contact = Contact.find(params[:contact_id])
@@ -11,7 +7,13 @@ class ImageController < ApplicationController
 	      	else
 				redirect_to @contact.pic_url
 			end
+		else
+			@img = Image.find(params[:id])
+			send_image(@img)
 	    end
+	end
+	def show contact
+		"hello"
 	end
 	def new
 
