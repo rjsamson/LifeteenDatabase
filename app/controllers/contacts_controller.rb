@@ -1,17 +1,53 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
+  def initialize
+    super
+    @fields = [:id, :first_name, :last_name]
+    @limit = 24
+    @order = "last_name asc, first_name asc"
+  end 
+
+  def index_impl
+    p = 0
+    logger.debug "TEST p: #{params[:p]}"
+    p = params[:p].to_i if(params[:p])
+
+    offset = p * @limit
+
+    if(params[:s]) then
+      @contacts=Contact.search(params[:s], @offset, @limit).select(@fields)
+    else
+      @contacts = Contact.select(@fields).order(@order).limit(@limit).offset(offset)
+      
+      #@contacts = Contact.offset(offset).limit(@limit).order(@order).select(@fields)
+    end
+
+  end
   # GET /contacts
   # GET /contacts.json
   def index
-    if(params[:s]) then
-      @contacts=Contact.search(params[:s])
-    else
-      @contacts = Contact.order("last_name asc, first_name asc")
+      index_impl
+
+     respond_to do |format|
+      format.html
+      format.json { render json: @contacts }
     end
+  end
+
+  def all
+      @contacts = Contact.order(@order).select(@fields)
     respond_to do |format|
       format.html
-      format.json { render json:  @contacts }
+      format.json { render json: @contacts }
+    end
+  end
+
+  def sub
+    index_impl
+    respond_to do |format|
+      format.html { render partial:'sub', layout: false }
+      format.json { render json: @contacts }
     end
   end
 

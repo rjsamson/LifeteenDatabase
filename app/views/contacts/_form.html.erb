@@ -30,9 +30,11 @@
    </div>
   <div class="row">
     <div class="span5">
+        <% if @contact.id then %>
         <div class="thumbnail" style="padding-top:30px; padding-bottom:30px">
-          <%=image_tag @contact.pic_url, width:160 %>
+          <%=link_to raw(image_tag "/contacts/#{@contact.id}/image", width:160), new_contact_image_path(@contact) %>
         </div>
+        <% end %>
     </div>
     <div class="span5 well">
       <h4>General Details</h4>

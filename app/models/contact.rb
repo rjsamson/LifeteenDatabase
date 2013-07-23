@@ -24,26 +24,36 @@ class Contact < ActiveRecord::Base
   	accepts_nested_attributes_for :address2, :allow_destroy => true
   	accepts_nested_attributes_for :college_address, :allow_destroy => true
 
+  	belongs_to :image
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()
  # 	end
-	
-	def self.search(search)
+	def as_json(options={})
+    	super(options.merge(only: [:id, :first_name, :last_name]))
+  	end
+
+	def self.search(search, offset, limit)
 		search_string = '%'+ search.to_s + '%'
-  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc")
+  		where("(lower(first_name  || ' ' || last_name)) LIKE lower(?) OR lower(first_name) like lower(?) OR lower(last_name) like lower(?)", search_string, search_string, search_string).order("last_name asc, first_name asc").offset(offset).limit(limit)
 	end
-	def pic_url
-		if self.facebook_id and self.facebook_id.length > 0 then
-			"https://graph.facebook.com/"+self.facebook_id+"/picture?type=large"
+	def pic_filename
+		if self.facebook_pic_url then
+			nil
 		elsif self.is_group_or_parish
-			"/assets/church.png"
+			"app/assets/images/church.png"
 		elsif self.gender? and self.gender.starts_with? 'f'
-			"/assets/female-silhouette.png"
+			"app/assets/images/female-silhouette.png"
 		else
-			"/assets/male-silhouette.png"
+			"app/assets/images/male-silhouette.png"
 		end
 	end
-
+	def facebook_pic_url
+		if self.facebook_id and self.facebook_id.length > 0 then
+			"https://graph.facebook.com/#{self.facebook_id}/picture?type=large"
+		else
+			nil
+		end
+	end
 	def facebook_url
 		if self.facebook_id and self.facebook_id.length > 0 then
 			"https://www.facebook.com/"+self.facebook_id
