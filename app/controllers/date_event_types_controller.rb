@@ -4,7 +4,7 @@ class DateEventTypesController < ApplicationController
   # GET /date_event_types
   # GET /date_event_types.json
   def index
-    @date_event_types = DateEventType.all.order(value: :asc)
+    @date_event_types = DateEventType.all_asc
   end
 
   # GET /date_event_types/1
