@@ -14,6 +14,8 @@ class Contact < ActiveRecord::Base
 	has_one :address2
 	has_one :college_address
 	has_many :catechetical_experience
+	has_many :date_events, through: :contact_date_events
+
     attr_accessible :first_name, :last_name, :gender, :is_group_or_parish, 
           :facebook_id, :myspace_id, :twitter_id, :graduating_class, :school,
           :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent,
@@ -30,7 +32,7 @@ class Contact < ActiveRecord::Base
   	
     @fields = [:id, :first_name, :last_name]
     @limit = 24
-    @order = "last_name asc, first_name asc"
+    @order = [last_name: :asc, first_name: :asc]
 
  #	after_initialize do
  #   	self.address1 ||= self.build_address1()

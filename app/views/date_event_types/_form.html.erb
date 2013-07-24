@@ -1,0 +1,17 @@
+<%= form_for(@date_event_type) do |f| %>
+  <% if @date_event_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@date_event_type.errors.count, "error") %> prohibited this date_event_type from being saved:</h2>
+
+      <ul>
+      <% @date_event_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%=f.text_field :value %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

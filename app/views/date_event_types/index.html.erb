@@ -1,0 +1,28 @@
+<h1>Listing Date Event Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @date_event_types.each do |date_event_type| %>
+      <tr>
+        <td><%= link_to date_event_type.value, date_event_type%>&nbsp;&nbsp;</td>
+        <td>
+            <%= link_to date_event_type, data: { confirm: 'Are you sure you want to delete date event type '+date_event_type.value+'?  It will delete all associated date events with it.', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn' do %>
+                 <i class="icon-trash icon-white"></i> Delete
+              <% end %>       
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Date event type', new_date_event_type_path %>
