@@ -1,0 +1,42 @@
+<div id="myCarousel" class="carousel slide" style="width: 400px; margin: 0 auto">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><%=image_tag "stambrose_start1.jpg", width: 400 %>
+    	<div class="carousel-caption">
+    		<h4>Welcome to St. Ambrose Parish Lifeteen Database</h4>
+    		<p>347 Old Loudon Rd  Latham, NY 12110</p>
+			<p>(518) 785-1351</p>
+    	</div>
+    </div>
+    <div class="item"><%=image_tag "stambrose_start2.jpg", width: 400  %>
+   	<div class="carousel-caption">
+   		<h4>A Nice Day</h4>
+    		<p>To Praise Jesus</p>
+    	</div>
+
+    </div>
+    <div class="item"><%=image_tag "stambrose_start3.jpg", width: 400  %>
+   	<div class="carousel-caption">
+   		<h4>Our Father</h4>
+    		<p>Who Art in Heaven</p>
+    	</div>
+
+    </div>
+
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+</script>

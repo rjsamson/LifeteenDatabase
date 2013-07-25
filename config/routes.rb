@@ -61,7 +61,7 @@ LifeteenDatabase::Application.routes.draw do
   resources :date_event_types
   resources :date_events
   
-  root to: "contacts#index"
+  root to: "start#index"
   get 'all_contacts', to: 'contacts#all'
   get 'sub_contacts', to: 'contacts#sub'
 end

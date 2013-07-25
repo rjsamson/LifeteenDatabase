@@ -1,29 +1,40 @@
-<h1>Listing date_events</h1>
+<h1>Listing Date Events</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @date_events.each do |date_event| %>
-      <tr>
-        <td><%=date_event.date_event_type.value%></td>
-        <td><%= link_to date_event.event_date, date_event %></td>
-       <td>
-            <%= link_to date_event, data: { confirm: 'Are you sure you want to delete the '+date_event.date_event_type.value+ ' date event on '+date_event.event_date.to_s+'?  It will delete all associated attendance information with it.', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn' do %>
-                 <i class="icon-trash icon-white"></i> Delete
-              <% end %>       
-        </td>
-  
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'New Date event', new_date_event_path %>
+
+  <div class="accordion" id="accordion2">
+  <% @date_event_types.each do |date_event_type| %>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%=date_event_type.id%>">
+        <h4><%=date_event_type.value%> Date Events</h4>
+      </a>
+    </div>
+    <div id="collapse<%=date_event_type.id%>" class="accordion-body collapse out">
+      <div class="accordion-inner">
+    <table class="table">
+      <tbody>
+      <% @date_events.each do |date_event| %>
+        <% if date_event.date_event_type == date_event_type then %>
+        <tr>
+          <td><%=date_event.date_event_type.value%></td>
+          <td><%= link_to date_event.event_date, date_event %></td>
+         <td>
+              <%= link_to date_event, data: { confirm: 'Are you sure you want to delete the '+date_event.date_event_type.value+ ' date event on '+date_event.event_date.to_s+'?  It will delete all associated attendance information with it.', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn' do %>
+                   <i class="icon-trash icon-white"></i> Delete
+                <% end %>       
+          </td>
+        </tr>
+          <% end %>
+      <% end %>
+      </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+   <% end %>
+
 
 <br>
 
