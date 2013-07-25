@@ -1,7 +1,7 @@
 <h1>Listing Date Events</h1>
 
 
-<%= link_to 'New Date event', new_date_event_path %>
+<%= link_to raw('<i class="icon-white icon-plus"></i> New Date Event'), new_date_event_path, class: 'btn btn-primary' %>
 
   <div class="accordion" id="accordion2">
   <% @date_event_types.each do |date_event_type| %>
@@ -34,8 +34,3 @@
     </div>
   </div>
    <% end %>
-
-
-<br>
-
-<%= link_to 'New Date event', new_date_event_path %>
