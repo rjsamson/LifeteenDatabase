@@ -92,4 +92,7 @@ class Contact < ActiveRecord::Base
 			nil
 		end
 	end
+	def gender_s
+		if self.gender? and self.gender.starts_with? 'f' then 'Female' else 'Male' end
+	end
 end

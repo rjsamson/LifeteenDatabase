@@ -5,5 +5,76 @@
     <p id="notice"><%= notice%></p>
 </div>
 <% end %>
-<%= render 'form' %>
+<%=link_to raw('<i class="icon-white icon-pencil"></i> Edit Contact'), edit_contact_path(@contact), class: 'btn btn-primary' %>
+ <div class="row">
+    <div class="span5">
+        <%=image_tag "/contacts/#{@contact.id}/image?#{Time.now}", width:400, class: 'img-polaroid'%>
+<% unless @contact.is_group_or_parish %>
+<p>
+  <small>Gender: <%=@contact.gender_s%></small>
+</p>
+<% end %>
+<% if @contact.facebook_url || @contact.twitter_url || @contact.myspace_url then %><p>
+	Follow <%=@contact.first_name %> on: 
+        <% if @contact.facebook_url %>
+          <a href="<%=@contact.facebook_url%>" target="_blank">
+            <%=image_tag "Facebook.png", width: 24%>
+          </a>
+        <%end%>
+        <% if @contact.twitter_url %>
+          <a href="<%=@contact.twitter_url%>" target="_blank">
+            <%=image_tag "Twitter.png", width:24%>
+          </a>
+        <%end%>
+       <% if @contact.myspace_url %>
+          <a href="<%=@contact.myspace_url%>" target="_blank">
+            <%=image_tag "Myspace.png", width: 24%>
+          </a>
+        <%end%>
+ </p>
+ <% end %>
+	 </div>
+     <div class="span5">
+ <p>
+ 	<address>
+		<% if @contact.address1 then %>
+ 		<a href="http://maps.google.com/?q=<%=raw @contact.address1.complete%>" target="_blank">
+ 		<i class="icon-envelope"></i><br>
+ 		</a>
+ 		<% end %>
+ 		<strong><%=@contact.first_name%> <%=@contact.last_name%></strong><br>
+ 		<% if @contact.address1 then %>
+ 		<a href="http://maps.google.com/?q=<%=raw @contact.address1.complete%>" target="_blank">
+ 		<%=@contact.address1.street%><br>
+ 		<%=@contact.address1.city%>, <%=@contact.address1.state%> <%=@contact.address1.zipcode%><br>
+ 		</a>
+ 		<% end %>
+ 		<br>
+ 		<% if @contact.phone and @contact.phone.strip.length > 0 then %><abbr title="Phone">P: </abbr><%= @contact.phone %><br><% end %>
+ 		<% if @contact.fax and @contact.fax.strip.length > 0  then %><abbr title="Phone">F: </abbr><%= @contact.fax %><br><% end %>
+  		<% if @contact.cell and @contact.cell.strip.length > 0  then %><abbr title="Phone">C: </abbr><%= @contact.cell %><br><% end %>
+  		<% if @contact.work_phone and @contact.work_phone.strip.length > 0  then %><abbr title="Phone">W: </abbr><%= @contact.work_phone %><br><% end %>
+  	</address>
+ </p>
+ <% unless @contact.is_group_or_parish then %>
+	 <p>
+	 	School: <%=@contact.school%>
+	 </p>
+	 <p>
+	 	Class: <%=@contact.graduating_class%>
+	 </p>
+	 <p>
+	 	Birthday: <%=@contact.birthday%>
+	 </p>
+ <% end %>
+ <% unless @contact.youth_group_leader.nil? || @contact.youth_group_leader.length == 0 then %>
+	 <p>
+	 	Youth Group Leader: <%=@contact.youth_group_leader%>
+	 </p>
+ <% end %>
+    </div>
+    </div>
+
+
+
 

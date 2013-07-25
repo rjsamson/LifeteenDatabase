@@ -32,9 +32,9 @@
     <div class="span5">
         <% if @contact.id then %>
         <div class="thumbnail" style="text-align:center; vertical-align:midle; padding-top:30px; padding-bottom:30px">
-          <%=link_to raw(image_tag "/contacts/#{@contact.id}/image", width:160), new_contact_image_path(@contact) %>
+          <%=link_to raw(image_tag "/contacts/#{@contact.id}/image?#{Time.now}", width:160), new_contact_image_path(@contact) %>
         </div>
-          <% if @contact.image_id then %>
+          <% if @contact.image then %>
              <%= link_to [@contact,@contact.image], data: { confirm: 'Are you sure you want to delete this image?', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn btn-small' do %>
               <i class="icon-trash icon-white"></i> Delete This Image
              <% end %>
