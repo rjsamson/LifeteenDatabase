@@ -15,7 +15,7 @@ class ImageController < ApplicationController
 			end
 		else
 			@img = Image.find(params[:id])
-			send_image(@img)
+			send_image_bytes(@img) if(@img)
 	    end
 	end
 	def new
@@ -49,7 +49,18 @@ class ImageController < ApplicationController
 		end
 
 	end
+	def destroy
+		if(params[:contact_id]) then
+			@contact = Contact.find(params[:contact_id])
+			@contact.image.destroy
+			redirect_to @contact
+		elsif params[:id] then
+			@img = Image.find(params[:id])
+			@img.destroy
+			redirect_to '/'
+		end
 
+	end
 	def update
 		@img = Image.find(params[:id])
 		@img.set_bytes params[:bytes]
