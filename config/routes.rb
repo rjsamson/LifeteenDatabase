@@ -60,6 +60,8 @@ LifeteenDatabase::Application.routes.draw do
   resources :image
   resources :date_event_types
   resources :date_events
+  resources :ministries
+  resources :events
   
   root to: "start#index"
   get 'all_contacts', to: 'contacts#all'

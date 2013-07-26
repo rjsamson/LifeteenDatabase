@@ -1,0 +1,19 @@
+<h1>Listing Ministries</h1>
+
+<%= link_to raw('<i class="icon-white icon-plus"></i> New Ministry'), new_ministry_path, class: 'btn btn-primary' %>
+<table class="table">
+  <tbody>
+    <% @ministries.each do |ministry| %>
+      <tr>
+        <td><%= link_to ministry.value, ministry %></td>
+        <td>
+              <%= link_to ministry, data: { confirm: 'Are you sure you want to delete ministry '+ministry.value+ '?  It will delete all associated attendance information with it.', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn' do %>
+                   <i class="icon-trash icon-white"></i> Delete
+                <% end %>       
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

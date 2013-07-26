@@ -1,5 +1,4 @@
 ﻿truncate contacts;
-alter table contacts drop column if exists old_contact_id;
 alter table contacts add column old_contact_id integer;
 insert into contacts(
 	first_name,
@@ -169,6 +168,20 @@ insert into date_events (old_date_event_id, event_date, date_event_type_id, crea
 (select old.date_event.id, old.date_event.event_date, det.id, old.date_event.created_date, old.date_event.modified_date
 from old.date_event inner join date_event_types det on det.old_date_event_type_id = old.date_event.date_event_type_id);
 
+truncate table ministries;
+alter table ministries add column old_ministry_id integer;
+
+insert into ministries (old_ministry_id, value, created_at, updated_at)
+(select old.ministry.id, old.ministry.ministry, old.ministry.created_date, old.ministry.modified_date from old.ministry);
+
+truncate table events;
+alter table events add column old_event_id integer;
+
+insert into events (old_event_id, value, created_at, updated_at)
+(select old.event.id, old.event.value, old.event.created_date, old.event.modified_date from old.event);
+
+alter table events drop column old_event_id;
+alter table ministries drop column old_ministry_id;
 alter table date_events drop column old_date_event_id;
 alter table date_event_types drop column old_date_event_type_id;
 alter table contacts drop column old_contact_id;
