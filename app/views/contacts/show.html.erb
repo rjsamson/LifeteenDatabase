@@ -1,10 +1,10 @@
-<h1><%=@contact.first_name%> <%=@contact.last_name%></h1>
 <%if notice then %>
 <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
     <p id="notice"><%= notice%></p>
 </div>
 <% end %>
+<h1><%=@contact.first_name%> <%=@contact.last_name%></h1>
 <%=link_to raw('<i class="icon-white icon-pencil"></i> Edit Contact'), edit_contact_path(@contact), class: 'btn btn-primary' %>
  <div class="row">
     <div class="span5">

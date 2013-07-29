@@ -69,6 +69,6 @@ class MinistriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ministry_params
-      params[:ministry]
+      params.require(:ministry).permit(:value)
     end
 end

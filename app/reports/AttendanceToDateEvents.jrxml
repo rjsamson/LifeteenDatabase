@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AttendanceToEvents" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81bd1db3-542d-454e-a353-ae05a78c0b5a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="earliest_date" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     c."last_name",
+     c."first_name",
+     de."event_date",
+     det."value" AS date_event_type_value
+FROM
+     "contact_date_event" cde INNER JOIN "contact" c ON cde."contact_id" = c."id"
+     INNER JOIN "date_event" de ON cde."date_event_id" = de."id"
+     INNER JOIN "date_event_type" det ON de."date_event_type_id" = det."id"
+where de.event_date > $P{earliest_date}
+order by det.value, de.event_date desc, c.last_name, c.first_name]]>
+	</queryString>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="event_date" class="java.sql.Timestamp"/>
+	<field name="date_event_type_value" class="java.lang.String"/>
+	<group name="Group1" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{date_event_type_value}+ " " + $F{event_date}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement uuid="3e842e7a-ab09-4778-932b-a202cbdcdd11" mode="Opaque" x="100" y="0" width="220" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{date_event_type_value}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="d73207e0-6ff6-421e-a1b9-e3a1167cfa7d" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+				<textField pattern="MM/dd/yyyy" isBlankWhenNull="false">
+					<reportElement uuid="cbeb449b-17f8-4622-9467-bdf917340d6b" mode="Opaque" x="320" y="0" width="235" height="31" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="24" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{event_date}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="d5841a06-d537-4401-b15d-c60ce2071582" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="7ed8f64f-aff8-4e2f-b1f3-1c856eeb44ea" x="20" y="20" width="194" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Attendance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="db4f63d9-cba8-4d06-8bed-47b901ac5016" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Attendance to Date Events]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<staticText>
+				<reportElement uuid="a8399d65-43fb-4d07-ac26-edf6d7b12f04" mode="Opaque" x="0" y="0" width="183" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2d701bfb-524c-4b7c-a062-bb057dfdf551" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="17c5771d-d8c4-453f-b8d5-63b7f9e45811" x="0" y="0" width="183" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{last_name}+", "+$F{first_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="238c7244-0927-4cb4-abab-1a060c76cdd4" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="19f7d7fb-33ac-462f-8ea9-84fed42439a4" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="e36801bb-052d-40c2-9a9c-d057564ce37e" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="ec25745d-884a-444f-994b-75a297b06f6c" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

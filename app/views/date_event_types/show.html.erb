@@ -1,5 +1,11 @@
-<p id="notice"><%= notice %></p>
+<%if notice then %>
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p id="notice"><%= notice%></p>
+</div>
+<% end %>
 
 <h1><%=@date_event_type.value%></h1>
-<%= link_to 'Edit', edit_date_event_type_path(@date_event_type) %> |
-<%= link_to 'Back', date_event_types_path %>
+
+<%= link_to raw('<i class="icon-pencil"></i> Edit'), edit_date_event_type_path(@date_event_type), class: 'btn' %>
+<%= link_to raw('<i class="icon-backward"></i> Back'), date_event_types_path, class: 'btn' %>

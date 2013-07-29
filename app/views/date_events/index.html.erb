@@ -1,6 +1,5 @@
 <h1>Listing Date Events</h1>
 
-
 <%= link_to raw('<i class="icon-white icon-plus"></i> New Date Event'), new_date_event_path, class: 'btn btn-primary' %>
 
   <div class="accordion" id="accordion2">
@@ -18,8 +17,7 @@
       <% @date_events.each do |date_event| %>
         <% if date_event.date_event_type == date_event_type then %>
         <tr>
-          <td><%=date_event.date_event_type.value%></td>
-          <td><%= link_to date_event.event_date, date_event %></td>
+          <td><%= link_to "#{date_event.date_event_type.value} on #{date_event.event_date}", date_event %></td>
          <td>
               <%= link_to date_event, data: { confirm: 'Are you sure you want to delete the '+date_event.date_event_type.value+ ' date event on '+date_event.event_date.to_s+'?  It will delete all associated attendance information with it.', disable_with: 'deleting...' }, method: :delete, class: 'btn-danger btn' do %>
                    <i class="icon-trash icon-white"></i> Delete

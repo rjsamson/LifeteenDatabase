@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @date_event_type %> |
-<%= link_to 'Back', date_event_types_path %>
+<%= link_to raw('<i class="icon-file"></i> Show'), @date_event_type, class: 'btn' %>
+<%= link_to raw('<i class="icon-backward"></i> Back'), date_event_types_path, class: 'btn' %>
+

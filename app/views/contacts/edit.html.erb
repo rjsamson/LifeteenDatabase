@@ -1,5 +1,12 @@
 <h1><%=@contact.first_name%> <%=@contact.last_name%></h1>
 
+<%= link_to raw('<i class="icon-file"></i> Show'), @contact, class: 'btn' %>
+<%= link_to raw('<i class="icon-backward"></i> Back'), contacts_path, class: 'btn' %>
+
+<br><br>
+
 <%= render 'form' %>
 
 
+<%= link_to raw('<i class="icon-file"></i> Show'), @contact, class: 'btn' %>
+<%= link_to raw('<i class="icon-backward"></i> Back'), contacts_path, class: 'btn' %>

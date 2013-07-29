@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AttendanceToEvents" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81bd1db3-542d-454e-a353-ae05a78c0b5a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="earliest_date" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     count(c.id) as count,
+     de.event_date,
+     det.value AS date_event_type_value
+FROM
+     "contact_date_event" cde INNER JOIN "contact" c ON cde."contact_id" = c."id"
+     INNER JOIN "date_event" de ON cde."date_event_id" = de."id"
+     INNER JOIN "date_event_type" det ON de."date_event_type_id" = det."id"
+where de.event_date > $P{earliest_date}
+group by det.value, de.event_date
+order by de.event_date, det.value]]>
+	</queryString>
+	<field name="count" class="java.lang.Long"/>
+	<field name="event_date" class="java.sql.Timestamp"/>
+	<field name="date_event_type_value" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="d5841a06-d537-4401-b15d-c60ce2071582" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="7ed8f64f-aff8-4e2f-b1f3-1c856eeb44ea" x="20" y="20" width="194" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Attendance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="db4f63d9-cba8-4d06-8bed-47b901ac5016" x="395" y="20" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Attendance to Date Events]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="edc95a1e-2838-4117-b09a-fda8649c7eb4" mode="Transparent" x="419" y="40" width="44" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[since]]></text>
+				</staticText>
+				<textField pattern="MM/dd/yyyy">
+					<reportElement uuid="eed90abf-80ff-43f3-ad3f-1a38e40fa883" mode="Transparent" x="475" y="43" width="100" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+					<textElement verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{earliest_date}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29"/>
+	</pageHeader>
+	<summary>
+		<band height="211">
+			<timeSeriesChart>
+				<chart>
+					<reportElement uuid="bcd5b18a-c25d-4be1-8b70-f90183c0456b" x="53" y="28" width="402" height="155"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<timeSeriesDataset timePeriod="Week">
+					<timeSeries>
+						<seriesExpression><![CDATA[$F{date_event_type_value}]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{event_date}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{count}]]></valueExpression>
+					</timeSeries>
+				</timeSeriesDataset>
+				<timeSeriesPlot>
+					<plot/>
+				</timeSeriesPlot>
+			</timeSeriesChart>
+		</band>
+	</summary>
+</jasperReport>

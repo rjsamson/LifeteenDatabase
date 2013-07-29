@@ -70,6 +70,6 @@ class DateEventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def date_event_params
-      params[:date_event]
+      params.require(:date_event).permit(:event_date, :date_event_type_id)
     end
 end

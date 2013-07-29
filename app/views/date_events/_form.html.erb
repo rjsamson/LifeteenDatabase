@@ -1,15 +1,19 @@
 <%= form_for(@date_event) do |f| %>
   <% if @date_event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@date_event.errors.count, "error") %> prohibited this date_event from being saved:</h2>
-
-      <ul>
-      <% @date_event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4><%= pluralize(@date_event.errors.count, "error") %> prohibited this date event from being saved:</h4>
+        <ul>
+        <% @date_event.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
+
   <% end %>
+
+  <%=f.select(:date_event_type_id, DateEventType.all_asc.collect { |det| [det.value, det.id]}) %>
+  <%=f.date_field :event_date %>
 
   <div class="actions">
    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>

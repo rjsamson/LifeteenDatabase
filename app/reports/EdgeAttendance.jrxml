@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EdgeNightAttendance" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="607cb2e4-d839-4d91-8639-42ca649ea79b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[select c.*,
+'(' || p.area_code || ') ' || p.prefix || '-' || p.suffix ||
+(case when p.extention is null or p.extention = '' then '' else ' ext. ' || p.extention end) as phone,
+im.bytes as image_bytes
+from contact c
+inner join phone p on p.id = c.phone_id
+inner join date_event_type det on det.value='Edge Night'
+inner join image im on im.id=det.icon_id
+where c.id in (
+select cde.contact_id from date_event de
+inner join date_event_type det
+on det.id = de.date_event_type_id
+inner join contact_date_event cde
+on cde.date_event_id = de.id
+where det.value = 'Edge Night'
+)
+and CAST(case when c.graduating_class is null or c.graduating_class = '' then '0' else c.graduating_class end AS integer) <= (
+case when date_part('month', current_timestamp) >=5 then date_part('year', current_timestamp) + 8 else date_part('year', current_timestamp) + 7 end)
+and CAST(case when c.graduating_class is null or c.graduating_class = '' then '0' else c.graduating_class end AS integer) >= (
+case when date_part('month', current_timestamp) <9 then date_part('year', current_timestamp) + 4 else date_part('year', current_timestamp) + 5 end)
+order by c.last_name, c.first_name]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="created_by_username" class="java.lang.String"/>
+	<field name="created_date" class="java.sql.Timestamp"/>
+	<field name="modified_by_username" class="java.lang.String"/>
+	<field name="modified_date" class="java.sql.Timestamp"/>
+	<field name="allergies" class="java.lang.String"/>
+	<field name="background_check" class="java.sql.Timestamp"/>
+	<field name="baptism" class="java.sql.Timestamp"/>
+	<field name="birthday" class="java.sql.Timestamp"/>
+	<field name="code_of_conduct" class="java.lang.Boolean"/>
+	<field name="college" class="java.lang.String"/>
+	<field name="college_email" class="java.lang.String"/>
+	<field name="confirmation" class="java.sql.Timestamp"/>
+	<field name="diet_restrictions" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="email2" class="java.lang.String"/>
+	<field name="facebook_id" class="java.lang.String"/>
+	<field name="first_communion" class="java.sql.Timestamp"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="first_reconciliation" class="java.sql.Timestamp"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="graduating_class" class="java.lang.String"/>
+	<field name="is_active" class="java.lang.Boolean"/>
+	<field name="is_group_or_parish" class="java.lang.Boolean"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="life_experience" class="java.lang.String"/>
+	<field name="medical" class="java.lang.String"/>
+	<field name="myspace_id" class="java.lang.String"/>
+	<field name="religious" class="java.lang.String"/>
+	<field name="safe_child_video_letter_sent" class="java.lang.Boolean"/>
+	<field name="school" class="java.lang.String"/>
+	<field name="twitter_id" class="java.lang.String"/>
+	<field name="virtus_training" class="java.sql.Timestamp"/>
+	<field name="watched_safe_child_video" class="java.lang.Boolean"/>
+	<field name="youth_group_leader" class="java.lang.String"/>
+	<field name="address_id" class="java.lang.Long"/>
+	<field name="address2_id" class="java.lang.Long"/>
+	<field name="college_address_id" class="java.lang.Long"/>
+	<field name="phone_id" class="java.lang.Long"/>
+	<field name="phone_cell_id" class="java.lang.Long"/>
+	<field name="phone_fax_id" class="java.lang.Long"/>
+	<field name="phone_work_id" class="java.lang.Long"/>
+	<field name="picture_id" class="java.lang.Long"/>
+	<field name="phone" class="java.lang.String"/>
+	<field name="image_bytes" class="java.lang.Object"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6681793f-fcd4-4389-8cba-bd4228c2dacb" style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[St. Ambrose Lifeteen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0604ec82-54ba-4819-9761-fec9df2a14e3" style="SubTitle" x="96" y="46" width="218" height="22"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Edge Attendance]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement uuid="a89db784-47fd-4334-a76a-fac1a4051947" x="353" y="0" width="200" height="68"/>
+				<imageExpression><![CDATA[$F{image_bytes}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="949e766b-52b7-450d-8632-d709d176e601" x="53" y="2" width="100" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="267b2719-ebc6-4232-83e8-8bb2ad705844" x="153" y="2" width="100" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dc862680-da9c-4ef4-93dd-9676a0c1ee9e" x="253" y="2" width="100" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="337a469c-49f6-4e77-8e5e-227cfd30720b" x="353" y="2" width="100" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d3dc5a2-2ca4-476e-b02f-053a634bd270" x="455" y="2" width="100" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[Birthday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dbbb6e04-a5c1-4161-a8d9-2d18ca343436" x="0" y="2" width="53" height="20"/>
+				<box leftPadding="5"/>
+				<textElement/>
+				<text><![CDATA[Here]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9f08a554-d475-4eee-ac27-aac0c7e019fc" x="53" y="0" width="100" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3faead8c-cecb-4fde-8a68-b5e68001419e" x="153" y="0" width="100" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="55f2b941-7e8f-46bb-950b-a92e50600c68" x="353" y="0" width="100" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{graduating_class}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="458a498f-cf9f-4c24-b44a-bb9f437c6ff0" x="453" y="0" width="100" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{birthday}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5696309e-aea2-4716-8d6e-4eef96063bf8" x="253" y="0" width="100" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6e961ed1-351d-4adc-a516-738dd7f3c387" x="0" y="0" width="53" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="22beb032-f790-4e7d-9de6-84ee8fe2bed5" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="798ef328-ea92-4ea7-8938-4c2f6d3714e1" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="09788554-03d2-435f-8c0b-f4ccbed74fda" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

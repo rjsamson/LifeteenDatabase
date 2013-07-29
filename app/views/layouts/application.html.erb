@@ -46,9 +46,16 @@
             </li>
        </ul>
         <form action="/contacts" class="navbar-search">
-          <input id="contact-search" name="s" type="text" class="input-medium search-query" autocomplete="off" placeholder="Search Contacts">
-        <input type="submit" value="Search" class="btn"/>
-        </form>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-search"></i></span>
+               <input id="contact-search" name="s" type="text" class="input-medium" autocomplete="off" placeholder="Search Contacts">
+           <%= button_tag(type: 'submit', class: "btn") do %>
+           Search
+          <% end %>
+              </div>
+            </div>
+         </form>
 <script type="text/javascript">
 
 $.getJSON('/all_contacts.json', function(data) {
