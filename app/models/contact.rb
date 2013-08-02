@@ -15,12 +15,14 @@ class Contact < ActiveRecord::Base
 	has_one :college_address
 	has_many :catechetical_experience
 	has_many :date_events, through: :contact_date_events
+	has_many :contact_date_events
+	has_many :date_events, dependent: :destroy, through: :contact_date_events
 
     attr_accessible :first_name, :last_name, :gender, :is_group_or_parish, 
           :facebook_id, :myspace_id, :twitter_id, :graduating_class, :school,
           :birthday, :youth_group_leader, :watched_safe_child_video, :safe_child_video_letter_sent,
           :allergies, :diet_restrictions, :medical, :phone, :fax, :cell, :work_phone, 
-          :address1, :address2, :college_address
+          :address1, :address2, :college_address, :date_events
 
   	accepts_nested_attributes_for :address1, :allow_destroy => true
   	accepts_nested_attributes_for :address2, :allow_destroy => true

@@ -2,5 +2,14 @@
 
 <h1><%="#{@date_event.date_event_type.value} on #{@date_event.event_date}" %></h1>
 
+
+<h4>Attendees:</h4>
+<ul>
+<%@date_event.contacts_list.each do |contact| %>
+<li><%=contact.last_name %>, <%=contact.first_name%>
+<% end %>
+</ul>
+
+
 <%= link_to raw('<i class="icon-pencil"></i> Edit'), edit_date_event_path(@date_event), class: 'btn' %>
 <%= link_to raw('<i class="icon-backward"></i> Back'), date_events_path, class: 'btn' %>

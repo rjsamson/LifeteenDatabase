@@ -180,6 +180,12 @@ alter table events add column old_event_id integer;
 insert into events (old_event_id, value, created_at, updated_at)
 (select old.event.id, old.event.value, old.event.created_date, old.event.modified_date from old.event);
 
+truncate table contact_date_events;
+insert into contact_date_events(date_event_id, contact_id, created_at, updated_at)
+(select de.id, c.id, current_timestamp, current_timestamp from old.contact_date_event cde
+inner join date_events de on de.old_date_event_id = cde.date_event_id
+inner join contacts c on c.old_contact_id = cde.contact_id);
+
 alter table events drop column old_event_id;
 alter table ministries drop column old_ministry_id;
 alter table date_events drop column old_date_event_id;
