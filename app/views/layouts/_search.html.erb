@@ -1,0 +1,34 @@
+        <form action="/contacts" class="navbar-form" role="search">
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-search"></i></span>
+               <input id="contact-search" name="s" type="text" class="input-medium" autocomplete="off" placeholder="Search Contacts">
+           <%= button_tag(type: 'submit', class: "btn") do %>
+           Search
+          <% end %>
+              </div>
+            </div>
+         </form>
+
+
+<script type="text/javascript">
+
+$.getJSON('/all_contacts.json', function(data) {
+  var contact_ids = [];
+  var contacts = [];
+
+  $.each(data, function(key, val) {
+    var name = val.first_name + " " + val.last_name;
+    contact_ids[name] = val.id
+    contacts.push(name);
+ });
+$("#contact-search").typeahead({
+    source : contacts,
+    highlighter: function(item){
+        return "<div><img src='/contacts/"+contact_ids[item]+"/image?time=<%=Time.now%>' width='36'/> "+item+"</div>";
+    },
+
+});
+});
+
+</script>

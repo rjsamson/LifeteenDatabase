@@ -1,0 +1,38 @@
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+       <div class="navbar-header">
+        <a class="navbar-brand" href="/"><img src="/assets/favicon.jpg" width="26"/>Lifeteen Database</a>
+      </div>
+        <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#">
+                    Contacts
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/contacts">Contact List</a></li>
+                    <li><a href="/contacts/new.htm">New Contact</a></li>
+                </ul>
+            </li>
+ 
+
+             <li class="dropdown">
+                <a class="dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#">
+                    Administration
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/date_event_types">Date Event Types</a></li>
+                    <li><a href="/date_events">Date Events</a></li>
+                     <li><a href="/events">Events</a></li>
+                     <li><a href="/ministries">Ministries</a></li>
+               </ul>
+            </li>
+       </ul>
+
+       <%= render 'layouts/search' %>
+ </div>

@@ -4,15 +4,32 @@ div#wrap{margin:0px auto;}
 </style>
 
 <h2>Listing Contacts</h2>
+<% if @date_event %>
+<h3>for the <%=@date_event.date_event_type.value%> on <%=@date_event.event_date%></h3>
+<% end %>
   <% if params[:s] and params[:s].length > 0 then %>
   <h4>Searching on: '<%=params[:s]%>'</h4>
   <% end %>
   <div id="wrap">
-  <%= render 'sub' %>
+  <%= render 'sub' if !@date_event %>
+  <%= render 'sub_date_event' if @date_event %>
   </div>
 
+  <script>
+    function highlightCell(cellName, checkbox) {
+      cell = document.getElementById(cellName);
+      if(checkbox.checked) {
+        cell.style.border="1px solid red";
+        cell.style.background="#FF6666";
+      }
+      else {
+        cell.style.border="";
+        cell.style.background="";
+      }
+    }
+  </script>
 
-<script type="text/javascript">
+<script>
 var page = 0;
 var s = "<%=params[:s]%>";
 function yHandler(){
@@ -24,7 +41,11 @@ function yHandler(){
   var y = yOffset + window.innerHeight;
   if(y >= contentHeight){
     page = page + 1;
-    var url = "/sub_contacts?p="+page;
+    <% if @date_event %>
+     var url = "sub_date_event_contacts?p="+page;
+    <% else %>
+      var url = "sub_contacts?p="+page;
+    <% end %>
     if(s.length > 0) {
       url += "&s="+s;
     }

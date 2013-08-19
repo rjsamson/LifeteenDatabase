@@ -15,9 +15,13 @@
   <%=f.select(:date_event_type_id, DateEventType.all_asc.collect { |det| [det.value, det.id]}) %>
   <%=f.date_field :event_date %>
 
+
   <div class="actions">
    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
     <i class="icon-ok icon-white"></i> Save
     <% end %>
+  <% if @date_event.id %>
+  <%= link_to raw('<i class="icon-user icon-white"></i> Edit Contact Attendees'), date_event_contacts_path(@date_event), class: 'btn btn-primary' %>
+  <% end %>
   </div>
 <% end %>

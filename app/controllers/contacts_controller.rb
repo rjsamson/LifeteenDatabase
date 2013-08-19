@@ -6,7 +6,10 @@ class ContactsController < ApplicationController
     page = params[:p].to_i if(params[:p])
     if(params[:s]) then
       @contacts=Contact.search(params[:s], page)
-    else
+    elsif(params[:date_event_id])
+      @contacts = DateEvent.find(params[:date_event_id]).contacts_list
+      @date_event = DateEvent.find(params[:date_event_id])
+   else
       @contacts = Contact.basic_page(page)
     end
 
@@ -38,6 +41,14 @@ class ContactsController < ApplicationController
     index_impl
     respond_to do |format|
       format.html { render partial:'sub', layout: false }
+      format.json { render json: @contacts }
+    end
+  end
+
+  def sub_date_event
+    index_impl
+    respond_to do |format|
+      format.html { render partial:'sub_date_event', layout: false }
       format.json { render json: @contacts }
     end
   end

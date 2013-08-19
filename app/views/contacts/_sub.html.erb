@@ -1,10 +1,10 @@
-  <ul class="thumbnails">
+ <ul class="thumbnails">
  <% @contacts.each do |contact| %>
     <li class="span2">
-      <div id="contact_thumbnail_<%=contact.id%>" class="thumbnail" style="text-align:center;height:200px;width">
-        <%=link_to (image_tag "/contacts/#{contact.id}/image", width:"160", alt:'"+contact.first_name + " " + contact.last_name + "'), contact%>
+      <div id="contact_thumbnail_<%=contact.id%>" class="thumbnail" style="text-align:center;height:220px;width">
+         <%=link_to (image_tag "/contacts/#{contact.id}/image", width:"160", alt:'"+contact.first_name + " " + contact.last_name + "'), contact%>
         <h4><%=link_to raw(contact.first_name + " " + contact.last_name), contact%></h4>
-       </div>
+        </div>
 
    </li>
   <% end if @contacts  %>

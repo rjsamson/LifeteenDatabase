@@ -6,7 +6,7 @@ class DateEventsController < ApplicationController
   def index
     @date_event_types = DateEventType.all_asc
     @date_events = DateEvent.all_desc
-  end
+end
 
   # GET /date_events/1
   # GET /date_events/1.json
@@ -41,6 +41,16 @@ class DateEventsController < ApplicationController
   # PATCH/PUT /date_events/1
   # PATCH/PUT /date_events/1.json
   def update
+    if params[:contacts]
+      params[:contacts].each do |contact_id|
+        contact = Contact.find(contact_id)
+        @date_event.contacts.delete(contact)
+        respond_to do |format|
+          format.html { redirect_to date_event_contacts_url }
+          format.json { head :no_content }
+        end
+      end
+    end
     respond_to do |format|
       if @date_event.update(date_event_params)
         format.html { redirect_to @date_event, notice: 'Date event was successfully updated.' }

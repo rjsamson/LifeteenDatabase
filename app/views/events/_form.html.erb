@@ -13,7 +13,12 @@
 
   <%=f.text_field :value %>
   
-  <div class="actions">
-    <%= f.submit %>
+<div class="actions">
+   <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+    <% end %>
+  <% if @event.id %>
+  <%= link_to raw('<i class="icon-user icon-white"></i> Edit Contact Attendees'), event_contacts_path(@event), class: 'btn btn-primary' %>
+  <% end %>
   </div>
 <% end %>
