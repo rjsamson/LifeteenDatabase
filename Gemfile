@@ -27,10 +27,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem "jasper-rails", "~> 1.0.3"
+#gem "jasper-rails", "~> 1.0.3"
 gem 'therubyracer'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+#gem 'less-rails'
+#gem 'twitter-bootstrap-rails'
 gem "seed_dump", "~> 0.5.3"
 gem 'protected_attributes'
 group :doc do

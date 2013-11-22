@@ -1,0 +1,4 @@
+  [1m[36m (1.3ms)[0m  [1mDROP DATABASE IF EXISTS "lifeteen_test"[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE "lifeteen_test" ENCODING = 'unicode'
+PG::Error: ERROR:  permission denied to create database
+: CREATE DATABASE "lifeteen_test" ENCODING = 'unicode'
